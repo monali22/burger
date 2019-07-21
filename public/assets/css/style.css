@@ -1,3 +1,28 @@
+body{
+  background-color: darkolivegreen
+}
+.column{
+  margin-top: 10%;
+  float: left;
+  width: 32%;
+  height:300px;
+  border: dashed
+}
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+#addABurgerCol{
+  background-color: brown;
+}
+#avableBurgerCol{
+background-color: blueviolet
+}
+#devouredBurgerCol{
+background-color: chartreuse
+}
+
 li {
   padding: 5px;
   margin: 5px;
