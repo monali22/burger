@@ -1,3 +1,9 @@
+<div class="jumbotron" >
+  <div class="container" style="background-image: url('/assets/images/burger.jpeg')">
+    <h1 class="display-4" style="text-align:center;color:white;font-weight:300;font-style:italic">Hungry????</h1>
+    <p class="lead" style="text-align: center;color:white;font-style:italic">Enjoy the delicious burgers</p>
+  </div>
+
 <div class="row">
   <div class="column" id="addABurgerCol">
     <form class="create=form">
@@ -13,7 +19,7 @@
     <ul>
       {{#each burgers}}
              {{#unless devoured}}
-                      {{>burgers/burger-block devoured=false}}
+                      {{>burgers/burger-block}}
              {{/unless}}
       {{/each}}
     </ul>
@@ -21,12 +27,17 @@
   <div class="column" id="devouredBurgerCol">
    <ul>
      {{#each burgers}}
-         
-           {{>burgers/ate-burgers}}
+        {{#if devoured}}
+         {{>burgers/ate-burgers}}
+        {{/if}}
           
      {{/each}}
    </ul>
   </div>
+
+</div>
+
+
 
 </div>
 
